@@ -272,7 +272,7 @@ footer{
 
     /* about  */
     .map iframe{
-        width: 300px;
+        width: 290px;
         height: 300px;
     }
 
@@ -280,5 +280,21 @@ footer{
     .items-list{
         display: flex;
         flex-direction: column;
+    }
+
+    /* menu */
+    .items img{
+        height: 250px;
+        width: 200px;
+    }
+
+    /* contact  */
+    .form{
+        height: 350px;
+        width: 290px;
+    }
+
+    .form input{
+        width: 200px;
     }
 }
