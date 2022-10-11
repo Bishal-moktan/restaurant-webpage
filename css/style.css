@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 95vh;
+    width: 100%;
+    background-image: url("../images/mono.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+}
+
+
+.brand{
+    padding-left: 60px;
+    color: #8758FF;
+    
+}
+
+.pages-nav{
+    background-color: #8758FF;
+}
+
+.pages-nav .brand{
+    color: white;
+}
+
+
+.links{
+    display: flex;
+    padding-right: 60px;
+    
+}
+
+.links a{
+    text-decoration: none;
+    font-size: larger;
+    padding: 0 20px;
+    color: white;
+}
+
+.links a:hover{
+    color: #8758FF;
+}
+
+.pages-nav a:hover{
+    color: white;
+}
+/* content  */
+.content{
+    margin-top: 130px;
+    color: white;
+    padding-left: 80px;
+    width: 50%;
+    background: rgba(0,0,0,0.4);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+
+}
+.content h1{
+    font-size: 80px;
+    color: #F2F2F2;
+}
+
+.content h1 span{
+    display: block;
+}
+
+.content p {
+    font-size: 30px;
+    color: #F1F1F1;
+}
+
+/* to top button  */
+.toTop{
+    position: sticky;
+    left: 90%;
+    top: 90%;
+    border: none;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 5px;
+    height: 30px;
+    width: 25px;
+    color: #F1F1F1;
+    
+    
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+/* animated text  */
+marquee{
+    background-color: #8758FF;
+    color: white;
+    height: 30px;
+    font-size: 20px;
+}
+
+
+/* menu  */
+
+.menu{
+    margin: 40px 60px;
+    text-align: center;
+}
+
+/* .items-list{
+    display: flex;
+    padding: 30px;
+    justify-content: space-evenly;
+} */
+
+.items-list{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 50px;
+}
+
+.items{
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #ccc;
+}
+
+.items:hover{
+    cursor: pointer;
+    position: relative;
+    bottom: 10px;
+}
+
+.items img{
+    height: 350px;
+    width: 300px;
+}
+
+.items p{
+    margin: 10px;
+}
+
+
+
+
+/* footer  */
+footer{
+    background-color: #ccc;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fa-brands, .fa-solid{
+    margin: 3px 0;
+    font-size: 20px;
+}
+
+.contact-details a, .socialmedia a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+/* contact css  */
+
+.section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    width: 100%;
+}
+
+.form{
+    border: 1px solid white;
+    box-shadow: 0 2px 5px #8758FF;
+    height: 350px;
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+}
+
+.form .heading{
+    color: white;
+    margin-bottom: 20px;
+    background-color: #8758FF;
+}
+
+.form input{
+    margin: 20px;
+    height: 30px;
+    width: 300px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.form button{
+    height: 35px;
+    width: 70px;
+    background-color: #8758FF;
+    border: 1px solid white;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+/* about us  */
+.map{
+    text-align: center;
+    margin: 30px 0;
+}
+
+.map h2{
+    margin-bottom: 30px;
+    color: #8758FF;
+}
+
+
+/* for responsive  */
+
+@media (max-width: 600px) {
+    nav{
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        background-color: rgba(0,0,0,0.4);
+        color: white;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .brand{
+        padding-left: 0;
+        padding-right: 50px;
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items:center;
+    }
+
+    .links a{
+        margin: 5px;
+    }
+
+    
+    /* content  */
+    .content{
+        display: none;
+    }
+
+
+    /* about  */
+    .map iframe{
+        width: 400px;
+        height: 300px;
+    }
+
+
+    .items-list{
+        display: flex;
+        flex-direction: column;
+    }
+}
