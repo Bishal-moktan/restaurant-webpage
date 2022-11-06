@@ -7,7 +7,7 @@
 .container{
     height: 95vh;
     width: 100%;
-    background-image: url("../images/mono.jpg");
+    background-image: url("../images/item-13.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -96,8 +96,6 @@ nav{
     height: 30px;
     width: 25px;
     color: #F1F1F1;
-    
-    
 }
 
 button:hover{
@@ -153,6 +151,25 @@ marquee{
     margin: 10px;
 }
 
+/* menu page  */
+.categories{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.type{
+    margin: 10px;
+    font-size: 20px;
+    border: none;
+    background-color: #fff;
+}
+
+.type:hover{
+    text-decoration: underline #8758FF;
+
+}
 
 
 
