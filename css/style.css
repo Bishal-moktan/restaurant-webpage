@@ -17,15 +17,34 @@
 nav{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 60px;
     background-color: rgba(0,0,0,0.4);
     color: white;
+    align-items: center;
+    
+}
+
+.togglerButton{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.togglerButton .bars{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    
 }
 
 
 .brand{
-    padding-left: 60px;
+    margin: .9rem;
     color: #8758FF;
     
 }
@@ -92,11 +111,13 @@ nav{
     top: 90%;
     border: none;
     background-color: rgba(0,0,0,0.4);
-    border-radius: 5px;
-    height: 30px;
-    width: 25px;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
     color: #F1F1F1;
 }
+
+
 
 button:hover{
     cursor: pointer;
@@ -128,6 +149,10 @@ marquee{
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 50px;
+}
+
+.menu h2{
+    margin-bottom: 20px;
 }
 
 .items{
@@ -254,22 +279,44 @@ footer{
 
 /* for responsive  */
 
-@media (max-width: 600px) {
+
+@media (max-width: 1300px) {
+    .content h1{
+        font-size: 60px;
+    }
+
+    .items-list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 800px) {
+    
+
     nav{
         display: flex;
         flex-direction: column;
-        height: 200px;
         background-color: rgba(0,0,0,0.4);
         color: white;
-        justify-content: space-evenly;
-        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .togglerButton{
+        display: flex;
+   
+    }
+
+    .links{
+        display: none;
     }
 
     .brand{
-        padding-left: 0;
-        padding-right: 50px;
+        margin: 20px 0;
     }
-    .links{
+
+    .links.active{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -315,3 +362,4 @@ footer{
         width: 200px;
     }
 }
+

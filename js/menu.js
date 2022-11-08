@@ -83,9 +83,9 @@ const shakes = document.querySelector(".shakes")
 
 function createCard(type){
   cardItem.innerHTML = ''
-  newMenu = filterItem(type)
+  const newMenu = filterItem(type)
   for(let item of newMenu){
-    const { title,category, price, img, desc} = item
+    const { title, price, img, desc} = item
     // console.log(title)
     const div1 = document.createElement('div')
     const image = document.createElement('img')
@@ -137,4 +137,7 @@ shakes.addEventListener("click", ()=> {
   createCard("shakes")
 })
 
+
+
+// home page menu section
 
