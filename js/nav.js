@@ -1,7 +1,10 @@
 const toggleButton = document.querySelector(".togglerButton")
-const links = document.getElementsByClassName("links")[0]
+const links = document.getElementsByClassName("links")
+const navLinks = document.querySelectorAll(".nav-links")
 
 toggleButton.addEventListener("click", ()=> {
-    console.log(links)
-    links.classList.toggle("active")
+    links[0].classList.toggle("on")
 })
+
+
+

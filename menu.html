@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>foodMandu</title>
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 
 <body>
@@ -16,23 +19,26 @@
             <h1>foodMandu</h1>
         </div>
         <div class="togglerButton">
-            <span class="bars"></span>
-            <span class="bars"></span>
-            <span class="bars"></span>
-    </div>
-        <div class="links">
-            <a href="index.html">
-                <p>Home</p>
+                <span class="bars"></span>
+                <span class="bars"></span>
+                <span class="bars"></span>
+        </div>
+        <div>
+            <ul  class="links">
+
+                <a href="index.html" class="nav-links">
+                    <li>Home</li>
             </a>
-            <a href="menu.html">
-                <p>Menu</p>
+            <a href="menu.html" class="nav-links">
+                <li>Menu</li>
             </a>
-            <a href="about.html">
-                <p>About us</p>
+            <a href="about.html" class="nav-links">
+                <li>About us</li>
             </a>
-            <a href="contact.html">
-                <p>Contact us</p>
+            <a href="contact.html" class="nav-links">
+                <li>Contact us</li>
             </a>
+        </ul>
         </div>
     
     </nav>
@@ -55,7 +61,13 @@
     <script src="js/menu.js"></script>
 <script src="js/nav.js"></script>
 
-
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+      offset: 100,
+      duration: 1000
+    });
+  </script>
 </body>
 
 </html>

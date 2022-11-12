@@ -95,6 +95,7 @@ function createCard(type){
 
 
     div1.setAttribute('class', 'items')
+    div1.setAttribute('data-aos', 'fade-right')
     image.src=img
     amount.innerText = '$' + price
     para.innerText = title.toUpperCase()

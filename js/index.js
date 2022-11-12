@@ -76,22 +76,7 @@ const menu = [
 
 
 
-//   document.querySelectorAll('a[href^="#home"]').forEach(anchor => {
-//     anchor.addEventListener('click', function (e) {
-//         e.preventDefault();
 
-//         document.querySelector(this.getAttribute('href')).scrollIntoView({
-//             behavior: 'smooth'
-//         });
-//     });
-// });  
-const anchor = document.querySelector('a[href="#home"]')
-anchor.addEventListener("click", function(e){
-    e.preventDefault()
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: "smooth"
-    })
-})
 
   const hours = new Date().getHours()
   const menuSection = document.querySelector(".items-list")
