@@ -1,135 +1,151 @@
 const menu = [
-    {
-      id: 1,
-      title: 'buttermilk pancakes',
-      category: 'breakfast',
-      price: 15.99,
-      img: './images/item-1.jpeg',
-      desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
-    },
-    {
-      id: 2,
-      title: 'diner double',
-      category: 'lunch',
-      price: 13.99,
-      img: './images/item-2.jpeg',
-      desc: `vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats `,
-    },
-    {
-      id: 3,
-      title: 'godzilla milkshake',
-      category: 'shakes',
-      price: 6.99,
-      img: './images/item-3.jpeg',
-      desc: `ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral.`,
-    },
-    {
-      id: 4,
-      title: 'country delight',
-      category: 'breakfast',
-      price: 20.99,
-      img: './images/item-4.jpeg',
-      desc: `Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism austin mlkshk truffaut, `,
-    },
-    {
-      id: 5,
-      title: 'egg attack',
-      category: 'lunch',
-      price: 22.99,
-      img: './images/item-5.jpeg',
-      desc: `franzen vegan pabst bicycle rights kickstarter pinterest meditation farm-to-table 90's pop-up `,
-    },
-    {
-      id: 6,
-      title: 'oreo dream',
-      category: 'shakes',
-      price: 18.99,
-      img: './images/item-6.jpeg',
-      desc: `Portland chicharrones ethical edison bulb, palo santo craft beer chia heirloom iPhone everyday`,
-    },
-    {
-      id: 7,
-      title: 'bacon overflow',
-      category: 'breakfast',
-      price: 8.99,
-      img: './images/item-7.jpeg',
-      desc: `carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird `,
-    },
-    {
-      id: 8,
-      title: 'american classic',
-      category: 'lunch',
-      price: 12.99,
-      img: './images/item-8.jpeg',
-      desc: `on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut  `,
-    },
-    {
-      id: 9,
-      title: 'quarantine buddy',
-      category: 'shakes',
-      price: 16.99,
-      img: './images/item-9.jpeg',
-      desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
-    },
-    
-  ];
+  {
+   id: 10,
+   title: 'Pizza',
+   category: 'breakfast',
+   price: 20,
+   img: './images/pizza.jpg',
+   desc: `Nepali style cheesy pizza`,
+  },
+  {
+   id: 11,
+   title: 'Tandoori Chicken',
+   category: 'breakfast',
+   price: 25.58,
+   img: './images/tandoori_chicken.jpg',
+   desc: `Tandoori chicken.`,
+ },
+
+   {
+     id: 1,
+     title: 'Pancakes',
+     category: 'breakfast',
+     price: 15.99,
+     img: './images/item-1.jpeg',
+     desc: ` Buttermilk pancake `,
+   },
+   {
+     id: 2,
+     title: 'Burger',
+     category: 'lunch',
+     price: 13.99,
+     img: './images/item-2.jpeg',
+     desc: ` Burger with fries `,
+   },
+   {
+     id: 3,
+     title: ' Milkshake',
+     category: 'shakes',
+     price: 6.99,
+     img: './images/item-3.jpeg',
+     desc: `Godzilla milkshake`,
+   },
+   {
+     id: 4,
+     title: 'Omlete',
+     category: 'breakfast',
+     price: 20.99,
+     img: './images/item-4.jpeg',
+     desc: `Bread omlette with coffee`,
+   },
+   {
+     id: 5,
+     title: 'Egg attack',
+     category: 'lunch',
+     price: 22.99,
+     img: './images/item-5.jpeg',
+     desc: `Egg attack`,
+   },
+   {
+     id: 6,
+     title: 'Shake',
+     category: 'shakes',
+     price: 18.99,
+     img: './images/item-6.jpeg',
+     desc: `Oreo shake`,
+   },
+   {
+     id: 7,
+     title: 'Bacon',
+     category: 'breakfast',
+     price: 8.99,
+     img: './images/item-7.jpeg',
+     desc: `Bacon overflow`,
+   },
+   {
+     id: 8,
+     title: 'Burger',
+     category: 'Breakfast',
+     price: 12.99,
+     img: './images/item-8.jpeg',
+     desc: `American style burger with extra chesse`,
+   },
+   {
+     id: 9,
+     title: 'quarantine buddy',
+     category: 'shakes',
+     price: 16.99,
+     img: './images/item-9.jpeg',
+     desc: `Quarantine buddy`,
+   },
+ ];
 
 
 
 
 
-  const hours = new Date().getHours()
-  const menuSection = document.querySelector(".items-list")
-  const foodInfo = document.querySelector(".foodInfo")
+const hours = new Date().getHours()
+const menuSection = document.querySelector(".items-list")
+const foodInfo = document.querySelector(".foodInfo")
 
-  function filterItem(type){
-    if(type === "all"){
-      return menu
-    }else{
-      newItem  = menu.filter(item => item.category === type)
-      return newItem
-    }
-    
+function filterItem(type){
+  if(type === "all"){
+    return menu
+  }else{
+    newItem  = menu.filter(item => item.category === type)
+    return newItem
   }
+  
+}
 
 function createCard(type){
-    menuSection.innerHTML = ''
-    const newMenu = filterItem(type)
-    foodInfo.innerText = `It's ${newMenu[0].category} time`
+  menuSection.innerHTML = ''
+  const newMenu = filterItem(type)
+  foodInfo.innerText = `It's ${newMenu[0].category} time`
 
-  for(let item of newMenu){
-    const { title, price, img, desc} = item
-    // console.log(title)
-    const div1 = document.createElement('div')
-    const image = document.createElement('img')
-    const para = document.createElement('h4')
-    const amount = document.createElement('p')
-    const description = document.createElement('p')
+for(let item of newMenu){
+  const { title, price, img, desc} = item
+  // console.log(title)
+  const div1 = document.createElement('div')
+  const image = document.createElement('img')
+  const para = document.createElement('h4')
+  const amount = document.createElement('p')
+  const description = document.createElement('p')
 
-    div1.setAttribute('class', 'items')
-    div1.setAttribute('data-aos', 'fade-up')
+  div1.setAttribute('class', 'items')
+  div1.setAttribute('data-aos', 'fade-up')
 
-    image.src=img
-    amount.innerText = '$' + price
-    para.innerText = title.toUpperCase()
-    description.innerText = desc
+  image.src=img
+  amount.innerText = '$' + price
+  para.innerText = title.toUpperCase()
+  description.innerText = desc
 
-    div1.appendChild(image)
-    div1.appendChild(para)
-    div1.appendChild(amount)
-    div1.appendChild(description)
+  div1.appendChild(image)
+  div1.appendChild(para)
+  div1.appendChild(amount)
+  div1.appendChild(description)
 
-    menuSection.appendChild(div1)
+  menuSection.appendChild(div1)
 }
 }
 
 
 if(hours >= 4 && hours <12){
- createCard("breakfast")
+createCard("breakfast")
 }else if(hours >= 12 && hours < 16){
- createCard("lunch")
+createCard("lunch")
 }else if(hours => 16 && hours < 17){
-   createCard("shakes")
+ createCard("shakes")
 }else{
 createCard("breakfast")
 }
